@@ -94,7 +94,7 @@ theme = "terminal"
       [[languages.en.menu.main]]
         identifier = "post"
         name = "Tags"
-        url = "/tags"
+        url = "/tags/"
       [[languages.en.menu.main]]
         identifier = "rust"
         name = "Rust Dev"
@@ -102,11 +102,11 @@ theme = "terminal"
       [[languages.en.menu.main]]
         identifier = "categories"
         name = "Categories"
-        url = "/categories"
+        url = "/categories/"
       [[languages.en.menu.main]]
         identifier = "friends"
         name = "Friend Links"
-        url = "/friends"
+        url = "/friends/"
       [[languages.en.menu.main]]
         identifier = "rss"
         name = "RSS"
