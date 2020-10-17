@@ -118,4 +118,4 @@ yarn.lock
 .vscode
 .idea
 public/*
-
+dist
