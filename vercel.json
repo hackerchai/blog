@@ -1,68 +1,59 @@
 {
     "build": {
         "env": {
-          "HUGO_VERSION": "0.76.5"
+            "HUGO_VERSION": "0.76.5"
         }
     },
     "headers": [
-      {
-        "source": "/assets/(.*)",
-        "headers" : [
-          {
-            "key" : "Cache-Control",
-            "value" : "public, max-age=31536000 , immutable"
-          }
-        ]
-      },
-      {
-        "source": "/(.*).xml",
-        "headers" : [
-          {
-            "key" : "Content-Type",
-            "value" : "application/rss+xml"
-          },
-          {
-            "key" : "Cache-Control",
-            "value" : "public, max-age=3600"
-          }
-        ]
-      },
-      {
-        "source": "/",
-        "headers" : [
-          {
-            "key" : "Link",
-            "value" : "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
-          }
-        ]
-      },
-      {
-        "source": "/(.*)index.html",
-        "headers" : [
-          {
-            "key" : "Link",
-            "value" : "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
-          }
-        ]
-      },
-      {
-        "source": "/([^/]+)/",
-        "headers" : [
-          {
-            "key" : "Link",
-            "value" : "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
-          }
-        ]
-      },
-      {
-        "source": "/([^/]+)/([^/]+)/",
-        "headers" : [
-          {
-            "key" : "Link",
-            "value" : "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
-          }
-        ]
-      }
+        {
+            "source": "/assets/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000 , immutable"
+                }
+            ]
+        },
+        {
+            "source": "/(.*).xml",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/rss+xml"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=3600"
+                }
+            ]
+        },
+        {
+            "source": "/",
+            "headers": [
+                {
+                    "key": "Link",
+                    "value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
+                }
+            ]
+        },
+        {
+            "source": "/([^/]+)/",
+            "headers": [
+                {
+                    "key": "Link",
+                    "value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
+                }
+            ]
+        },
+        {
+            "source": "/([^/]+)/([^/]+)/",
+            "headers": [
+                {
+                    "key": "Link",
+                    "value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
+                }
+            ]
+        }
     ],
     "trailingSlash": true
-  }
+}
