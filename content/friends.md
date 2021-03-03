@@ -25,6 +25,10 @@ gitmentId: /friend-list/
 
 [无垠](https://flyhigher.top/ "无垠")
 
+[RiinoSite](https://riino.site "EXEC-RS")
+
+[Nios34 的博客](https://nios.cf "Nios34 的博客")
+
 欢迎交换链接
 ------
 
