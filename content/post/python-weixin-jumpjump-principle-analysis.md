@@ -24,7 +24,7 @@ description: 目前爆红的微信小游戏，讲解了其Python外挂的实现�
 =====
 
 2017 年 12 月 28 日下午，微信发布了 6.6.1 版本，加入了「小游戏」功能，并提供了官方 DEMO「跳一跳」。这是一个 2.5D 插画风格的益智游戏，玩家可以通过按压屏幕时间的长短来控制这个「小人」跳跃的距离。分数越高，那么在好友排行榜更加靠前。 
-![介绍](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-intro.webp)
+![介绍](/images/2018/01/weixin-jumpjump-intro.webp)
 
 辅助脚本
 ====
@@ -119,7 +119,7 @@ if screenshot_way == 2 or screenshot_way == 1:
 3.关键步骤：寻找棋子坐标和下一跳棋盘坐标
 
 *   识别棋子：靠棋子的颜色来识别位置，通过截图发现最下面一行大概是一条直线，就从上往下一行一行遍历，比较颜色（颜色用了一个区间来比较）找到最下面的那一行的所有点，然后求个中点，求好之后再让 Y 轴坐标减小棋子底盘的一半高度从而得到中心点的坐标
-![](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-piece.webp) 
+![](/images/2018/01/weixin-jumpjump-piece.webp) 
 
 这段代码的核心是Python的PIL库操作，如果不了解请自行Google学习。
 
@@ -227,17 +227,17 @@ if piece_x < w/2:
 ```
 
 这时候从边界最上方一行一行扫描，由于圆形的块最顶上是一条线，方形的上面大概是一个点，所以就用类似识别棋子的做法多识别了几个点求中点，这时候得到了块中点的 X 轴坐标，这时候假设现在棋子在当前块的中心，从上顶点往下 +274 的位置开始向上找颜色与上顶点一样的点，为下顶点，取两者平均则是棋盘上平面中心点Y坐标。另外，如果上一跳命中中间，则下个目标中心会出现 r245 g245 b245 的白点，寻找这个白点可以直接找到棋盘上平面的中心点Y坐标 中心点如图：
-![](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-board-point.webp) 
+![](/images/2018/01/weixin-jumpjump-board-point.webp) 
 
 274像素的寻找方式： 
-![](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-pixel-find.webp) 
+![](/images/2018/01/weixin-jumpjump-pixel-find.webp) 
 
 4.测算两点距离和点按时间确定
 
 *   两点距离计算 距离的求法很简单，和初中直角坐标系下两点距离公式一致：
-![](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-distance.webp)
+![](/images/2018/01/weixin-jumpjump-distance.webp)
 
-![](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2018/01/weixin-jumpjump-distance-summary.webp)
+![](/images/2018/01/weixin-jumpjump-distance-summary.webp)
 
 ```python
 math.sqrt((board_x - piece_x) ** 2 + (board_y - piece_y) ** 2)

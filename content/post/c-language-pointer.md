@@ -60,7 +60,7 @@ p指向的内存大小:4
 ```
 
 这就是指针的基本使用，可用下图来说明:
-![c-pointer](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2014/12/c-pointer.webp)
+![c-pointer](/images/2014/12/c-pointer.webp)
 
 指针与数组
 =====
@@ -112,7 +112,7 @@ after add 1, q = 1411444200
 ```
 
 因为内存是线性的，C中所谓的二维数组不过是数组的数组，arr这个数组有10个元素，每个元素是一个长度为100的数组，在程序员的脑子里面，arr是一个有10行100列的二维数组。 代码里的p是一个指向int型的指针，q是一个指向“有100个int的int数组”的指针。所以p和q的初始化方式是不同的，但是开始的时候他们都指向了arr这个数组的数组的首地址（初始时是相等的），但是到后面分别执行自增操作之后，因为它们的类型不同，因此根据指针自增运算的含义，他们移动的步长也不相同，p移动了sizeof(int)个字节，而q移动了sizeof(int[100])个字节，于是它们的值也大不相同，可以用下图来说明： 
-![c-pointer-array](https://cdn.jsdelivr.net/npm/hackerchai@0.3.0/blog/images/2014/12/c-pointer-array.webp)
+![c-pointer-array](/images/2014/12/c-pointer-array.webp)
 
 另外要注意的就是字符二维数组的声明：
 
