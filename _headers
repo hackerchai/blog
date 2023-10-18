@@ -1,7 +1,8 @@
-/*
+https://blog.hackerchai.com/*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
+  Permissions-Policy: document-domain=()
   Content-Security-Policy: script-src 'self'; frame-ancestors 'none';
   Link: <https://blog.cdn.hackerchai.com>; rel="preconnect", <https://s.hackerchai.com>; rel=preconnect
 
