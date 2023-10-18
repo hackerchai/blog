@@ -11,19 +11,19 @@ I am a backend developer as well as a Barcelona fans. Besides, I am also an open
 
 I am focusing on these social issues: `Human Rights`, `Liberty`, `Privacy`, `Copyright`, `Information transparency`.
 
-[![](https://portfolio.cdn.hackerchai.com/homepage/github.svg)](https://github.com/hackerchai)
+Here is my [Github](https://github.com/hackerchai).
 
 ## Coding
 
 I am using these program languages and tools:
 
-- 🛠️ Rust | Golang | PHP | Python
+- 🛠️ Rust | Golang | PHP | Python | K8S
 
 - 🖥️ MacOS | Arch Linux | Kali Linux | Zsh | KDE
 
 - ⚙️️ VSCode | Vim | Jetbrains | 4 Spaces for Tab
 
-- 📱️ IOS | LineageOS | Xposed | Magisk
+- 📱️ ios | LineageOS | Xposed | Magisk
 
 Currently, I am having my internship at [Zeabur](https://zeabur.com), working on Golang/K8S projects, [Zeabur](https://zeabur.com) is a startup company focusing on next-generation PaaS.
 
