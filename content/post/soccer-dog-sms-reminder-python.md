@@ -25,9 +25,9 @@ description: 使用Python2编写的自动短信提醒足球赛脚本，使用url
 截图
 --
 
-![](/images/2018/02/soccer-dog-sms-screenshot.webp) 
+![](https://blog.cdn.hackerchai.com/images/2018/02/soccer-dog-sms-screenshot.webp) 
 
-![](/images/2018/02/soccer-dog-reminder-result.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/02/soccer-dog-reminder-result.webp)
 
 实现
 --

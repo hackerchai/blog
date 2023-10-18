@@ -36,19 +36,19 @@ description: 通俗移动的ESNI原理讲解，用ESNI保护隐私和对抗信�
 
 *   SNI协议示意图
 
-![SNI协议](/images/2019/02/sni.webp "SNI协议")
+![SNI协议](https://blog.cdn.hackerchai.com/images/2019/02/sni.webp "SNI协议")
 
 *   TLS1.3完整握手流程
 
-![TLS1.3完整握手流程](/images/2019/02/tls13_procedure.webp)
+![TLS1.3完整握手流程](https://blog.cdn.hackerchai.com/images/2019/02/tls13_procedure.webp)
 
 ### 为了弥补缺陷因应运而生的ESNI
 
 在上述过程之中，存在的问题就是，在ClientHello环节中，TLS会在这个位置以**明文**的形式讲要请求的Host写在数据包之中，如果在网络路由中有任何的监听节点，那么用户所访问网站的域名将暴露无遗，这将是巨大的用户隐私泄露:
-![明文SNI](/images/2019/02/Cloudflare_https_with_plaintext_dns_tls12_plaintext_sni.webp)
+![明文SNI](https://blog.cdn.hackerchai.com/images/2019/02/Cloudflare_https_with_plaintext_dns_tls12_plaintext_sni.webp)
 
 所以在最新的关于[ESNI的草案](https://tools.ietf.org/html/draft-rescorla-tls-esni-00)中，`IETF`重新设计了一种加密的Client Hello机制，从而修复了这个问题: 
-![ESNI](/images/2019/02/Cloudflare_https_with_secure_dns_tls13_encrytped_sni-1.webp)
+![ESNI](https://blog.cdn.hackerchai.com/images/2019/02/Cloudflare_https_with_secure_dns_tls13_encrytped_sni-1.webp)
 
 **不过这里问题又来了，之前服务器和客户端并没有事先交换任何数据啊，这个加密的凭证从何而来啊？？？**
 
@@ -87,13 +87,13 @@ Firefox所在的Mozilla宣布从`Firefox 62`版本之后开始支持`ESNI`，默
 4.  （可选）搜索`network.trr.bootstrapAddress`，讲此值修改位第三步的DNS域名的`IP`。此举是为了避免使用操作系统DNS查询域名受到劫持，一般来说这些DNS的`IP`是不会变的
   
 
-![Firefox ESNI](/images/2019/02/firefox-esni-profile.webp)
+![Firefox ESNI](https://blog.cdn.hackerchai.com/images/2019/02/firefox-esni-profile.webp)
 
 5.  将`network.security.esni.enabled`设置为`true`,此举为了打开浏览器对于ESNI的支持（感谢[chenlshi](https://github.com/chenIshi)同学的提醒，在原版的文章中我不小心遗漏了这个关键的步骤）
 
 6.  完成配置后重启浏览器，再打开[在线验证页面验证](https://encryptedsni.com/)来查询你的浏览器是否完全支持`ESNI`功能，如果出现如图说明配置成功了
 
-![Firefox ESNI Verify](/images/2019/02/firefox-esni-verify.webp)
+![Firefox ESNI Verify](https://blog.cdn.hackerchai.comhttps://blog.cdn.hackerchai.com/images/2019/02/firefox-esni-verify.webp)
 
 ### 验证
 
@@ -101,11 +101,11 @@ Firefox所在的Mozilla宣布从`Firefox 62`版本之后开始支持`ESNI`，默
 
 1.  首先打开`Wireshark`的抓包功能，然后开启`Chrome`浏览器打开上述网址，页面加载完后停止抓包，在得到的结果中查询协议为`TLS1.3`和报文为`Client Hello`的报文，通过观察发现域名的Host果然被以明文形式写在数据包中（参见`Server_Name`字段）：
 
-![Wireshark抓包 明文SNI](/images/2019/02/cloudflare-wireshark-no-esni.webp)
+![Wireshark抓包 明文SNI](https://blog.cdn.hackerchai.com/images/2019/02/cloudflare-wireshark-no-esni.webp)
 
 2.  然后打开`Firefox Nightly`浏览器重复上述操作，这次发现在整个数据包中根本找不到`Server_Name`字段，说明`Host`已经被加密：
 
-![Wireshark抓包 ESNI](/images/2019/02/cloudflare-wireshark-esni.webp)
+![Wireshark抓包 ESNI](https://blog.cdn.hackerchai.com/images/2019/02/cloudflare-wireshark-esni.webp)
 
 # Nginx/Apache支持以及展望
 

@@ -50,9 +50,9 @@ description: 一加7手机上使用最新的文件系统F2FS最佳实践，使�
 
 目前笔者的`oneplus7`所可以使用的第三方内核中，大部分都支持了`F2FS`的驱动，在[XDA](https://forum.xda-developers.com/oneplus-7-pro/development)论坛中，有一个关于`oneplus7 pro`使用Kirisakura内核并且开启`/data`分区`F2FS`的[测评](https://forum.xda-developers.com/showpost.php?p=79603954&postcount=4)，相对于原来的EXT4文件系统有了比较大的提升，尤其是在随机写入、数据库相关性能中有了甚至几倍的提升
 
-![EXT4性能测试](/images/2019/12/compare-ext4-performance.webp)
+![EXT4性能测试](https://blog.cdn.hackerchai.com/images/2019/12/compare-ext4-performance.webp)
 
-![F2FS性能测试](/images/2019/12/compare-f2fs-performance.webp)
+![F2FS性能测试](https://blog.cdn.hackerchai.com/images/2019/12/compare-f2fs-performance.webp)
 
 在作者的是实际使用中，能够明显的感觉到`F2FS`文件系统带来的应用启动速度的提升，再有就是更小的电量消耗（可能与笔者使用的[arter97](https://forum.xda-developers.com/showpost.php?p=79603954&postcount=4)内核有关）简直不要再香，闲话少叙，我们赶快来试试
 

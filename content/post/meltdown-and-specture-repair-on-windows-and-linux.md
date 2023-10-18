@@ -41,7 +41,7 @@ Windows客户，通过使用微软公司发布的检测PowerShell脚本，能够
 *   其次，需要调用相应脚本，对应命令：`PS> Get-SpeculationControlSettings`
 *   其中，开启的保护会显示为True，未开启的保护则会显示为False，如下图所示：
 
-![](/images/2018/01/window-meltodwn-test.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/window-meltodwn-test.webp)
 
 Linux
 -----
@@ -59,7 +59,7 @@ $ cd spectre-meltdown-checker
 $ sudo ./spectre-meltdown-checker.sh
 ```
 
-![](/images/2018/01/linux-meltodwn-test.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/linux-meltodwn-test.webp)
 
 结果一目了然
 
@@ -74,18 +74,18 @@ Windows
 ### Windows系统更新
 
 获取Windows1月8日的更新，如果你是Windows10的话，那么这个更新的代号叫做[KB4056892](http:https://support.microsoft.com/en-us/help/4056892// "KB4056892") 具体方法：选择“开始” 按钮，然后依次选择“设置” >“更新和安全” >“Windows 更新”。选择“检查更新”。如果有可用更新，请安装它们。 
-![](/images/2018/01/meltdown-patch.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/meltdown-patch.webp)
 
 更新后请重启再运行检查脚本，看到类似于下图，这个意思是说 Meltdown补丁已经成功，但是Spectre漏洞修复不完整。红色的文字内容是指改名用户还是需要额外的芯片组固件更新。如果用户的笔记本电脑/台式机/服务器供应商提供了额外的芯片组固件更新，他们可以从官方站点获取，安装并完成修补程序。 
-![](/images/2018/01/meltdown-patched.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/meltdown-patched.webp)
 
 ### BIOS芯片组固件升级
 
 可以在这个页面查询你的主板提供商（List of OEM /Server device manufacturers）：[Protect your Windows devices against Spectre and Meltdown](http://https://support.microsoft.com/en-us/help/4073757/protect-your-windows-devices-against-spectre-meltdown "Protect your Windows devices against Spectre and Meltdown") 以我自为例，我找到Lenovo后，追踪链接，在[下载页面](https://support.lenovo.com/us/zh/solutions/len-18282#ideapad)搜索自己电脑的型号**R720-15IKBN**，然后下载对应的 .exe 文件。
-![](/images/2018/01/2018-01-17-01-43-47-screenshot.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/2018-01-17-01-43-47-screenshot.webp)
 
 最后双击这个文件，按提示一路重启就可以完成BIOS的固件更新。
-![](/images/2018/01/windows-meltdown-fix.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/windows-meltdown-fix.webp)
 
 再次运行测试，结果如上，就此完成Windows上对于次漏洞的修复。
 
@@ -93,12 +93,12 @@ Ubuntu (Linux)补丁
 ----------------
 
 这里以我自己的Ubuntu为例，介绍如何修补漏洞。其他发行版大同小异，主要留意官方社区对于漏洞的修补工作进度和新发行内核等。 这里需实时关注[SecurityTeam/KnowledgeBase/SpectreAndMeltdown - Ubuntu Wiki](http:https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown?_ga=2.85737308.439532818.1516098621-1958454140.1515318461// "SecurityTeam/KnowledgeBase/SpectreAndMeltdown - Ubuntu Wiki")来获取最新的漏洞修复情况 
-![](/images/2018/01/2018-01-17-01-04-24-screenshot.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/2018-01-17-01-04-24-screenshot.webp)
 
 ### 安装新版本内核
 
 为了修补漏洞，Linux内核团队将 [内核页表隔离](http://https://zh.wikipedia.org/zh-hans/%E5%86%85%E6%A0%B8%E9%A1%B5%E8%A1%A8%E9%9A%94%E7%A6%BB "内核页表隔离")（[PTI](http://https://en.wikipedia.org/wiki/PTI "PTI")）和 [IBRS patch series](http://https://lwn.net/Articles/743019/ "IBRS patch series") 两项技术加入内核之中来对抗Meltdown和Specture。 用户只需要将系统升级到长期发行版本（LTS）或者现在正在迭代周期的系统（Artful 17.10 ）即可获得更新。 
-![](/images/2018/01/2018-01-14-00-28-42-screenshot.webp)]
+![](https://blog.cdn.hackerchai.com/images/2018/01/2018-01-14-00-28-42-screenshot.webp)]
 
 打开终端输入：
 
@@ -119,7 +119,7 @@ $ sudo apt-get dist-upgrade
 ```
 
 此时再重新执行测试脚本，你会发现原来的VULNERABLE都变成NOT VULNRERABLE 
-![](/images/2018/01/2018-01-17-01-04-03-screenshot.webp)
+![](https://blog.cdn.hackerchai.com/images/2018/01/2018-01-17-01-04-03-screenshot.webp)
 
 Nvidia显卡驱动
 ----------

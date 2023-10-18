@@ -292,6 +292,6 @@ void loop()
 ```
 
 完工照片 
-![bluetooth-aiduino-car](/images/2014/09/bluetooth-aiduino-car.webp) 
+![bluetooth-aiduino-car](https://blog.cdn.hackerchai.com/images/2014/09/bluetooth-aiduino-car.webp) 
 
 附上视频： [http://youku.tv/BJQEyU](http://youku.tv/BJQEyU)
