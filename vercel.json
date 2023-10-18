@@ -1,7 +1,7 @@
 {
 	"build": {
 		"env": {
-			"HUGO_VERSION": "0.82.0"
+			"HUGO_VERSION": "0.119.0"
 		}
 	},
 	"headers": [
@@ -24,6 +24,33 @@
 				{
 					"key": "Cache-Control",
 					"value": "public, max-age=3600"
+				}
+			]
+		},
+				{
+			"source": "/",
+			"headers": [
+				{
+					"key": "Link",
+					"value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
+				}
+			]
+		},
+		{
+			"source": "/([^/]+)/",
+			"headers": [
+				{
+					"key": "Link",
+					"value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
+				}
+			]
+		},
+		{
+			"source": "/([^/]+)/([^/]+)/",
+			"headers": [
+				{
+					"key": "Link",
+					"value": "<https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin, <https://cdn.jsdelivr.net>; rel=dns-prefetch, <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin"
 				}
 			]
 		},
