@@ -1,4 +1,4 @@
-https://blog.hackerchai.com/*
+https://:blog.hackerchai.com/*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
