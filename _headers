@@ -2,10 +2,8 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
-  Referrer-Policy: no-referrer
-  Permissions-Policy: document-domain=()
   Content-Security-Policy: script-src 'self'; frame-ancestors 'none';
-  Link: <https://blog.cdn.hackerchai.com>; rel=dns-prefetch, <https://blog.cdn.hackerchai.com>; rel=preconnect; crossorigin, <https://s.hackerchai.com>; rel=dns-prefetch, <https://s.hackerchai.com>; rel=preconnect; crossorigin
+  Link: <https://blog.cdn.hackerchai.com>; rel="preconnect", <https://s.hackerchai.com>; rel=preconnect
 
 https://:blog-hackerchai.pages.dev/*
   X-Robots-Tag: noindex
