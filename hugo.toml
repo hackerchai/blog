@@ -1,4 +1,4 @@
-baseURL = "http://blog.hackerchai.com/"
+baseURL = "/"
 languageCode = "zh-cn"
 title = "Hackerchai's IT Blog"
 theme = "terminal"
