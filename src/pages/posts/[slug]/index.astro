@@ -7,6 +7,8 @@ import getPageNumbers from "@utils/getPageNumbers";
 import slugify from "@utils/slugify";
 import { SITE } from "@config";
 
+export const prerender = true;
+
 export interface Props {
   post: CollectionEntry<"blog">;
 }

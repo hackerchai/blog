@@ -13,6 +13,8 @@ featured: true
 description: Casbin-RS权限控制库生态介绍
 ---
 
+export const prerender = true;
+
 ## Table of contents
 
 # 什么是[Casbin-rs](https://github.com/casbin/casbin-rs)

@@ -12,6 +12,8 @@ featured: false
 description: C语言下各个平台不同数据结构占用内存
 ---
 
+export const prerender = true;
+
 最近在备战NOIP提高组初赛，突然发现了这个问题，贴出来
 
 一. 程序运行平台 不同的平台上对不同数据类型分配的字节数是不同的。

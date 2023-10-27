@@ -12,6 +12,8 @@ featured: false
 description: 进制转换基础知识
 ---
 
+export const prerender = true;
+
 一、二进制数转换成十进制数 由二进制数转换成十进制数的基本做法是，把二进制数首先写成加权系数展开式，然后按十进制加法规则求和。这种做法称为"按权相加"法。 例1105 把二进制数110.11转换成十进制数。
 ![下载](https://blog.cdn.hackerchai.com/images/2014/10/decimal-to-binary-1.webp)
 

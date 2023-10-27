@@ -5,6 +5,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
+import nodejs from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,4 +38,8 @@ export default defineConfig({
     },
   },
   scopedStyleStrategy: "where",
+  adapter: nodejs({
+    mode: "middleware", // or 'standalone'
+  }),
+  output: "server",
 });

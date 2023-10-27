@@ -21,6 +21,8 @@ featured: true
 description: 通俗移动的ESNI原理讲解，用ESNI保护隐私和对抗信息审查
 ---
 
+export const prerender = true;
+
 ## Table of contents
 
 # ESNI

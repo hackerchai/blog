@@ -10,6 +10,8 @@ draft: false
 description: 一次演讲活动
 ---
 
+export const prerender = true;
+
 # 第一次上台做计算机演讲
 
 主要给大家讲解了一些计算机基本原理和硬件结构，并为大家带来一个用C#编写的Windows窗体程序，本次活动由东北育才学校高中部电子科技社团承办
