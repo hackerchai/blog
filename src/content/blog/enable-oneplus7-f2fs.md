@@ -13,8 +13,6 @@ featured: false
 description: 一加7手机上使用最新的文件系统F2FS最佳实践，使用Arter97内核
 ---
 
-export const prerender = true;
-
 ## Table of contents
 
 # F2FS为何物

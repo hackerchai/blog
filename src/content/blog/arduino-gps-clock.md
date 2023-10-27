@@ -11,8 +11,6 @@ featured: false
 description: 使用GPS模块提供最准确的时间，LCD1602负责显示工作
 ---
 
-export const prerender = true;
-
 ![gps-arduino-clock-1](https://blog.cdn.hackerchai.com/images/2014/09/gps-arduino-clock-1.webp)
 
 ![gps-arduino-clock-2](https://blog.cdn.hackerchai.com/images/2014/09/gps-arduino-clock-2.webp)

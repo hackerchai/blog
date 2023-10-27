@@ -14,8 +14,6 @@ featured: true
 description: 使用Python2编写的自动短信提醒足球赛脚本，使用urllib
 ---
 
-export const prerender = true;
-
 ## Table of contents
 
 ## 前言
