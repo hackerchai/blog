@@ -18,7 +18,7 @@ description: 用Arduino和Motor Shield制作蓝牙小车，使用了安卓手机
 
 附上代码：
 
-```C
+```c
 int PWMA=5;
 int PWMB=6;
 int INA=4;
