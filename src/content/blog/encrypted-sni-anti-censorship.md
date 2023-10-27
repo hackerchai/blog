@@ -91,7 +91,7 @@ Firefox所在的Mozilla宣布从`Firefox 62`版本之后开始支持`ESNI`，默
 
 6.  完成配置后重启浏览器，再打开[在线验证页面验证](https://encryptedsni.com/)来查询你的浏览器是否完全支持`ESNI`功能，如果出现如图说明配置成功了
 
-![Firefox ESNI Verify](https://blog.cdn.hackerchai.comhttps://blog.cdn.hackerchai.com/images/2019/02/firefox-esni-verify.webp)
+![Firefox ESNI Verify](https://blog.cdn.hackerchai.com/images/2019/02/firefox-esni-verify.webp)
 
 ### 验证
 
