@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Hackerchai</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -46,9 +46,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         后端开发/云原生/隐私安全/政治观点 等等
       </p>
       <p>
-        阅读我的博文或者访问我的 className="hover:text-skin-accent underline
-        underline-offset-4 decoration-dashed"
-        <LinkButton href="https://hackerchai.com">主页</LinkButton> 来了解我.
+        阅读我的博文或者访问我的
+        <LinkButton
+          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+          href="https://hackerchai.com"
+        >
+          主页
+        </LinkButton> 来了解我.
       </p>
       {
         // only display if at least one social link is enabled
