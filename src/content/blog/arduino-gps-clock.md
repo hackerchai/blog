@@ -5,7 +5,7 @@ tags:
   - gps
   - serial
 pubDatetime: 2014-11-10T14:47:02Z
-postSlug: arduino-gps-clock
+slug: arduino-gps-clock
 draft: false
 featured: false
 description: 使用GPS模块提供最准确的时间，LCD1602负责显示工作

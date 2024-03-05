@@ -15,7 +15,7 @@ tags:
   - 网络审查
   - 隐私保护
 pubDatetime: 2019-02-26T20:53:30Z
-postSlug: encrypted-sni-anti-censorship
+slug: encrypted-sni-anti-censorship
 draft: false
 featured: true
 description: 通俗移动的ESNI原理讲解，用ESNI保护隐私和对抗信息审查

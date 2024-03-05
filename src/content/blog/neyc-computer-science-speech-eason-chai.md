@@ -4,7 +4,7 @@ author: Eason Chai
 pubDatetime: 2014-10-25T10:17:13Z
 tags:
   - 演讲
-postSlug: neyc-computer-science-speech-eason-chai
+slug: neyc-computer-science-speech-eason-chai
 featured: false
 draft: false
 description: 一次演讲活动

@@ -6,7 +6,7 @@ pubDatetime: 2014-10-11T23:02:02Z
 tags:
   - NOIP
   - C
-postSlug: decimal-to-binary
+slug: decimal-to-binary
 draft: false
 featured: false
 description: 进制转换基础知识

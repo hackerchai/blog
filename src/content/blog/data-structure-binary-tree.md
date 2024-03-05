@@ -6,7 +6,7 @@ tags:
   - NOIP
   - 数据结构
   - 算法
-postSlug: data-structure-binary-tree
+slug: data-structure-binary-tree
 draft: false
 featured: false
 description: 二叉树解惑

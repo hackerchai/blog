@@ -4,7 +4,7 @@ Author: Eason Chai
 tags:
   - Arduino
 pubDatetime: 2014-09-26T12:03:56Z
-postSlug: arduino-bluetooth-car
+slug: arduino-bluetooth-car
 draft: false
 featured: false
 description: 用Arduino和Motor Shield制作蓝牙小车，使用了安卓手机蓝牙遥控

@@ -8,7 +8,7 @@ tags:
   - 补丁
 date: 2018-01-18 12:36:22
 pubDatetime: 2018-01-18T12:36:22Z
-postSlug: meltdown-and-specture-repair
+slug: meltdown-and-specture-repair
 draft: false
 featured: false
 description: 修复多平台下Meltdown/Specture漏洞

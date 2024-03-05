@@ -8,7 +8,7 @@ tags:
   - 脚本
   - 足球
 pubDatetime: 2018-02-05T21:29:04Z
-postSlug: soccer-dog-sms-reminder-python
+slug: soccer-dog-sms-reminder-python
 draft: false
 featured: true
 description: 使用Python2编写的自动短信提醒足球赛脚本，使用urllib
