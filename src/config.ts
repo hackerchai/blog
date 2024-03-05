@@ -8,9 +8,13 @@ export const SITE: Site = {
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
+  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
-export const LOCALE = ["zh-CN"]; // set to [] to use the environment default
+export const LOCALE = {
+  lang: "zh", // html lang code. Set this empty and default will be "en"
+  langTag: ["zh-CN"], // BCP 47 Language Tags. Set this empty [] to use the environment default
+} as const;
 
 export const LOGO_IMAGE = {
   enable: false,
