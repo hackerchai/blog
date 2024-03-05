@@ -5,7 +5,7 @@ pubDatetime: 2014-10-11T22:06:52Z
 tags:
   - C
   - 数据结构
-postSlug: c-sizeof-int-platforms
+slug: c-sizeof-int-platforms
 toc: true
 draft: false
 featured: false

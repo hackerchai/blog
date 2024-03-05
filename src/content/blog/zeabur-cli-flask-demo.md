@@ -12,7 +12,7 @@ tags:
   - Intern
 
 pubDatetime: 2023-02-06T17:17:30Z
-postSlug: zeabur-cli-flask-demo
+slug: zeabur-cli-flask-demo
 draft: false
 featured: true
 description: 这篇文章将会指引你在 10 分钟内，使用 Zeabur CLI 完成一个从零开始的 Flask 后端应用搭建并部署到 Zeabur

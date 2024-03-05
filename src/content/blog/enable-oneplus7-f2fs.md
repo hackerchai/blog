@@ -7,7 +7,7 @@ tags:
   - 刷机
   - 性能优化
   - Android
-postSlug: enable-oneplus7-f2fs
+slug: enable-oneplus7-f2fs
 draft: false
 featured: false
 description: 一加7手机上使用最新的文件系统F2FS最佳实践，使用Arter97内核

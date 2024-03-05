@@ -7,7 +7,7 @@ tags:
   - casbin
   - authz
   - acl
-postSlug: rust-acl-casbin
+slug: rust-acl-casbin
 draft: false
 featured: true
 description: Casbin-RS权限控制库生态介绍

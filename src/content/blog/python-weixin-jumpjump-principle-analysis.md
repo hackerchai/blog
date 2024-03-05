@@ -10,7 +10,7 @@ tags:
   - 游戏外挂
   - 游戏辅助
 pubDatetime: 2018-01-05T18:50:26Z
-postSlug: python-weixin-jumpjump-principle-analysis
+slug: python-weixin-jumpjump-principle-analysis
 toc: true
 featured: false
 description: 目前爆红的微信小游戏，讲解了其Python外挂的实现机制和代码解析

@@ -8,7 +8,7 @@ tags:
   - 指针
   - 数据结构
 pubDatetime: 2014-12-12T14:25:56Z
-postSlug: c-language-pointer
+slug: c-language-pointer
 draft: false
 featured: false
 description: 深入浅出语言指针
