@@ -5,6 +5,9 @@ tags:
   - Golang
   - Rust
   - FFI
+  - llvm
+  - PL
+  - async
   - Intern
 pubDatetime: 2024-10-09T17:08:04Z
 slug: qiniu-campus-llgo-rust-ecosystem
@@ -22,7 +25,7 @@ description: 讲解这三个月以来对 LLGo Rust 生态探索包括 Rust 语�
 - Rust FFI 到 LLGo 的移植
 - Rust 高效类库移植到 LLGo
 - 使用 [Libuv](https://github.com/libuv/libuv) 为 LLGo 实现异步 I/O 能力
-- 使用 Hyper 实现 LLGo 的 `net/http` 部分
+- 使用 [Hyper](https://github.com/hyperium/hyper) 实现 LLGo 的 `net/http` 部分
 - 使用 [tokio/io-uring](https://github.com/tokio-rs/io-uring) 为 LLGo 加速异步 I/O 能力
 
 可以说我们基本所有的目标都是在为实现一个高效的 `net/http` 功能而服务，因为我本身有 Rust 的相关开发经验，所以在综合考量了 Rust 语言具有内存/线程安全、高性能、良好的开发体验等特性，我们最终选择了开辟 Rust 这一领域来填补 LLGo 在这方面的空缺。另外我们也考虑到了 Rust 语言 Web 框架经常在 [TechEmpower](https://www.techempower.com/benchmarks/#hw=ph&test=fortune&section=data-r22) 测评中强势霸榜，所以我们选择了知名 Web 框架 [Axum](https://github.com/tokio-rs/axum)的底层类库 [Hyper](https://github.com/hyperium/hyper) 作为基础。后续我们在实践中发现 Hyper 并没有将异步I/O 这部分暴露到 FFI 中，所以我们需要自己实现一套异步运行时，在综合考量后我们选择了 [Libuv](https://github.com/libuv/libuv) 作为我们的异步实现，作为 C 生态的老牌异步运行时也同是作为 `Node.js` 的默认实现，性能和稳定性都尚佳。
@@ -322,7 +325,7 @@ macOS 15.1 24B5055e arm64, Darwin 24.1.0, Apple M3 Pro (12) @ 4.06 GHz, 36864MiB
 - Hyper Server 部分的 FFI [实现](https://github.com/hyperium/hyper/pull/3084) 仍然存在一些问题， Server Task 的处理方式仍然有待商榷，毕竟这个 PR #3084 并没有进入主线
 - LLGo 本身的开销，参考 `纯 C 语言的实现比 LLGo 快约 66.6% ` 这个结果
 
-总而言之，这是我目前经历到的最棒的一段实习。也很感谢我的导师们 [傲飞老师](https://github.com/aofei) 、 [七叶老师](https://github.com/visualfc) 、 [长军老师](https://github.com/CarlJi) 还有 [老许](https://github.com/xushiwei) 的倾情指导，让我对于系统底层和 Golang 底层有了更深刻的理解。
+总而言之，这是我目前经历到的最棒的一段实习。也很感谢我的导师们 [傲飞老师](https://github.com/aofei) 、 [七叶老师](https://github.com/visualfc) 、 [长军老师](https://github.com/CarlJi) 还有 [老许](https://github.com/xushiwei) 的倾情指导，让我对于系统底层和 Golang 底层有了更深刻的理解。也要感谢以下我的几位给力队友：[英杰](https://github.com/spongehah)、[之阳](https://github.com/luoliwoshang)，如果没有他们我可能很难独自完成这么复杂的工作。
 
 ## 链接
 
