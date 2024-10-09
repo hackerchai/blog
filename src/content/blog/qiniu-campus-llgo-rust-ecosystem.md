@@ -6,11 +6,11 @@ tags:
   - Rust
   - FFI
   - Intern
-pubDatetime: 2024-10-09T8:08:04Z
+pubDatetime: 2024-10-09T17:08:04Z
 slug: qiniu-campus-llgo-rust-ecosystem
 draft: false
 featured: true
-description: LLGo Rust 生态探索和七牛云 1024 实训营
+description: 讲解这三个月以来对 LLGo Rust 生态探索包括 Rust 语言对接 LLGo 、异步运行时和net/http 框架的实现
 ---
 
 之前写了一篇文章总结在七牛云 1024 实训营的这三个月的体验，今天写一篇偏技术方向的博客作为总结
@@ -39,7 +39,7 @@ description: LLGo Rust 生态探索和七牛云 1024 实训营
 
 添加必要的 Cargo 依赖项并进行配置以生成兼容C语言的动态库
 
-```Toml
+```toml
 [dependencies]
 libc = "0.2"
 
@@ -158,7 +158,7 @@ UV_EXTERN int uv_accept(uv_stream_t* server, uv_stream_t* client);
 
 LLGo 版本：
 
-```c
+```go
 // llgo:link (*Stream).Accept C.uv_accept
 func (server *Stream) Accept(client *Stream) c.Int {
 	return 0
@@ -295,9 +295,11 @@ func main() {
 
 测试环境：
 
-```go
+```bash
 macOS 15.1 24B5055e arm64, Darwin 24.1.0, Apple M3 Pro (12) @ 4.06 GHz, 36864MiB
 ```
+
+测试结果：
 
 | Language | qps-100c | qps-1000c | diff     |
 | -------- | -------- | --------- | -------- |
@@ -306,7 +308,7 @@ macOS 15.1 24B5055e arm64, Darwin 24.1.0, Apple M3 Pro (12) @ 4.06 GHz, 36864MiB
 
 | Language | qps-100c | qps-1000c | diff   |
 | -------- | -------- | --------- | ------ |
-| LLGo     | 42257.73 | 40612.14  | 0.00%  |
+| LLGo     | 40612.14 | 43051.82  | 0.00%  |
 | C        | 67660.83 | 70277.74  | +66.6% |
 
 这个基准测试显示，Golang 的 `net/http` 比 LLGo 的 `net/http` 快约 154%，而在相同代码逻辑下，纯 C 语言的实现比 LLGo 快约 66.6%
