@@ -16,9 +16,9 @@ featured: true
 description: 讲解这三个月以来对 LLGo Rust 生态探索包括 Rust 语言对接 LLGo 、异步运行时和net/http 框架的实现
 ---
 
-## Table of contents
-
 之前写了一篇文章总结在七牛云 1024 实训营的这三个月的体验，今天写一篇偏技术方向的博客作为总结
+
+## Table of contents
 
 ## 目标
 
@@ -155,7 +155,7 @@ func FsOpen(loop *Loop, req *Fs, path *c.Char, flags c.Int, mode c.Int, cb FsCb)
 
 ##### 迁移方法函数
 
-C版本：
+C 版本：
 
 ```c
 UV_EXTERN int uv_accept(uv_stream_t* server, uv_stream_t* client);
@@ -170,7 +170,7 @@ func (server *Stream) Accept(client *Stream) c.Int {
 }
 ```
 
-这里我们使用 LLGo 实现的注释语法糖，默认第一个参数作为方法的接受方，其余参数保持不变
+这里我们使用 LLGo 实现的注释语法糖，默认第一个参数作为方法的接受方，其余参数保持不变（要求顺序一致）
 
 #### 使用 Libuv
 
